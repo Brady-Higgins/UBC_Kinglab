@@ -1,0 +1,5 @@
+{
+    "input_file":"dataset1.xlsx", 
+    "output_file":"eco-data_dataset1.xlsx",
+    "rain_threshold":"0.4"
+}
