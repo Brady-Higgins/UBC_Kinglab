@@ -1,4 +1,4 @@
-How to use the json:
+How to use settings.json:
 output_file : use any output name you'd like and it will create "file_name.xslx"
 input_file : name of file you're using, include the xslx file extension
 rain_threshold : float used to represent minimum amount of avg precipitation for a day to be considered rainy (used for days since last rain)
@@ -6,12 +6,26 @@ rain_threshold : float used to represent minimum amount of avg precipitation for
 .env Use:
 a .env is used to store secrets, so do not publish the .env anywhere. It contains the API_key for meteostat
 
-Notes
+requirements.txt:
+This is used to download the neccesary packages for the script
+    How to:
+    # create a virtual environment so the packages are not installed globally
+    python -m venv venv 
+    # activate the virtual environment. This is how you do it on windows, its different on different machines.
+    .\venv\Scripts\activate
+    # recursively install the packages in requirements.txt
+    pip install -r requirements.txt
+
+Updates to the script will be reflected in the github repository:
+https://github.com/Brady-Higgins/UBC_Kinglab
+
+Misc Notes
 ------------------------------
-I calculated average humidity, but as a measurement apparently it sucks so do with that what you will
+I calculated average humidity, but as a measurement it isn't very accurate so do with that what you will
 https://www.campbellsci.com/blog/averaging-relative-humidity
 I considered it a rainfall day if the avg preciption was above 0.0 mm of rain to be a day of rain, this can be changed in settings.json under "rain_threshold" 
 I used "NA" for days since last rain if there was none prior in the +-7 day range for each day 
 The API key is good for 500 requests a month on the free version. Each usage of this script makes the number of rows of requests.
-
+https://rapidapi.com/meteostat/api/meteostat/pricing
+The script is also slow due to request per second limits
 
