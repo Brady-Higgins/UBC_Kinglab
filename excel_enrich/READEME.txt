@@ -23,7 +23,7 @@ Misc Notes
 ------------------------------
 I calculated average humidity, but as a measurement it isn't very accurate so do with that what you will
 https://www.campbellsci.com/blog/averaging-relative-humidity
-I considered it a rainfall day if the avg preciption was above 0.0 mm of rain to be a day of rain, this can be changed in settings.json under "rain_threshold" 
+I considered it a rainfall day if the avg preciption was above 0.4 mm of rain to be a day of rain, this can be changed in settings.json under "rain_threshold" 
 I used "NA" for days since last rain if there was none prior in the +-7 day range for each day 
 The API key is good for 500 requests a month on the free version. Each usage of this script makes the number of rows of requests.
 https://rapidapi.com/meteostat/api/meteostat/pricing
