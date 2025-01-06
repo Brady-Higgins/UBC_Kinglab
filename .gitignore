@@ -1,6 +1,6 @@
 #excel
 *xlsx
-
+*.csv
 #history
 .history
 .history/*
